@@ -1,1 +1,1 @@
-worker: cabal install discord-haskell && cabal run
+worker: ./dist/build/discord-haskell-bot/discord-haskell-bot
