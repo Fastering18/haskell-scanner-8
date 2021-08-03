@@ -30,8 +30,9 @@ executable discord-haskell-bot
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     
-    build-depends:       base
-                     , ghc-options:         -threadedtext
+    ghc-options:         -threaded
+    build-depends:     base
+                     , text
                      , unliftio
                      , discord-haskell
     hs-source-dirs:   app
