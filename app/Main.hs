@@ -1,6 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}  -- allows "string literals" to be Text
 module Main where
 
+import System.Environment
 import Control.Monad (when, forM_, void)
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
@@ -20,7 +21,7 @@ main = pingpongExample
 pingpongExample :: IO ()
 pingpongExample = do 
     userFacingError <- runDiscord $ def { 
-                                        discordToken = "Bot ODY3NTcxMTA0Nzg0MzE4NDY0.YPjCjg.LZc97Q06ZtLJFLZvH62oDOuYY_E"
+                                        discordToken = getEnv("BotToken")
                                         , discordOnEvent = eventHandler 
                                         }
     TIO.putStrLn userFacingError
