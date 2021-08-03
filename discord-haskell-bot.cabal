@@ -34,6 +34,6 @@ executable discord-haskell-bot
     build-depends:     base
                      , text
                      , unliftio
-                     , discord-haskell
+                     , discord-haskell >= 1.8.8
     hs-source-dirs:   app
     default-language: Haskell2010
